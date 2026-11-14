@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+project=$(cd -- "$(dirname -- "$0")/../.." && pwd)
+node_bin=$(cat "$project/.local/node-path")
+exec "$node_bin" "$project/deployment/mcp/server.mjs"
